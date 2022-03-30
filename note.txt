@@ -13,3 +13,32 @@ embedded checkout.
 
 
 For most applications, we recommend the Charges API since it can be customized. This outweighs the simplicity that the Checkout API offers. If you're selling a fixed product and customization doesn't play a big role, feel free to use the Checkout API.
+
+========####========
+
+pip install coinbase-commerce==1.0.1 
+
+after that:-
+In order to work with the Coinbase Commerce API, you'll need to create an account (if you haven't already). After you've created an account, log in and navigate to your settings. Scroll down to the "API keys" section, click "Create an API key" and then "Reveal". Copy the API key to your clipboard.
+
+========####========
+
+# core/settings.py
+COINBASE_COMMERCE_API_KEY = '<your coinbase api key here>'
+
+
+========####========
+
+Coinbase Charges:-
+Coinbase Charges is the most customizable approach for collecting crypto payments. With this approach, you have full control over the charges.
+
+Workflow:
+
+Use a client to connect to the Coinbase Commerce API,
+Create a charge (from JSON),
+Fetch the newly created charge and pass it to the template,
+Redirect the user to the Coinbase Commerce hosted site,
+(Optional) Verify the charge using webhooks
+
+Create a Charge:-
+To request a cryptocurrency payment, you create a charge. Since cryptocurrency payments are push payments, a charge will expire after a waiting period if no payment has been detected. Charges are identified by a unique 8 character code.
