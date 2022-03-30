@@ -1,0 +1,15 @@
+The Coinbase Commerce API provides two different ways of accepting crypto payments: Coinbase Charges and Coinbase Checkout.
+
+Advantages of Coinbase Charges:-
+highly customizable,
+ability to programmatically attach metadata
+
+
+Advantages of Coinbase Checkout:-
+works out of the box,
+dashboard product management,
+embedded checkout.
+
+
+
+For most applications, we recommend the Charges API since it can be customized. This outweighs the simplicity that the Checkout API offers. If you're selling a fixed product and customization doesn't play a big role, feel free to use the Checkout API.
