@@ -18,7 +18,7 @@ def home_view(request):
         'name': 'ebradsProduct',
         'description': 'A really good product',
         'local_price': {
-            'amount': '1.00',
+            'amount': '0.20',
             'currency': 'USD'
         },
         'metadata': {
