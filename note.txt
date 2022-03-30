@@ -42,3 +42,5 @@ Redirect the user to the Coinbase Commerce hosted site,
 
 Create a Charge:-
 To request a cryptocurrency payment, you create a charge. Since cryptocurrency payments are push payments, a charge will expire after a waiting period if no payment has been detected. Charges are identified by a unique 8 character code.
+
+
