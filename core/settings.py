@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-wly9z!%ph5ut6p#yfqj9!q*5%39tw-x0_2(6kb&q)ft2f#5!7$'
 
-COINBASE_COMMERCE_API_KEY = "48535479-24b9-49bf-bd9d-74d53c18f7d5"
+COINBASE_COMMERCE_API_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
