@@ -1,5 +1,6 @@
 import logging
 
+from decouple import config
 from coinbase_commerce.client import Client
 from coinbase_commerce.error import SignatureVerificationError, WebhookInvalidPayload
 from coinbase_commerce.webhook import Webhook
@@ -13,7 +14,7 @@ from core import settings
 
 def home_view(request):
     client = Client(api_key=settings.COINBASE_COMMERCE_API_KEY)
-    domain_url = 'http://localhost:8000/'
+    domain_url = config('domain_url')
     product = {
         'name': 'ebradsProduct',
         'description': 'A really good product',
