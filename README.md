@@ -16,4 +16,24 @@ The payments will appear in the Commerce Dashboard under "Payments" section.
 
 # Confirm Payments with Webhooks
 
-go to "ConfirmPaymentsWithWebhooks" branch
+Our app works well at this point, but we can't programmatically confirm payments yet. We just redirect the user to the success page after they check out, but we can't rely on that page alone since payment confirmation happens asynchronously.
+(ie- the user might get redirected to the success page before their payment is confirmed and before we receive their funds.)
+
+To get notified when the payment goes through, you need to create a webhook. We'll need to create a simple endpoint in our application, which Coinbase Commerce will call whenever an event occurs (i.e., when a charge is confirmed). By using webhooks, we can be sure the payment went through successfully.
+
+# Register the Endpoint
+
+Navigate to https://commerce.coinbase.com/dashboard/settings, scroll down to "Webhook subscriptions" and click on "Add an endpoint"
+Enter your endpoint URL and press "Save".
+Note - The URL needs to start with HTTPS, which means that you need to deploy your app before you can test it.
+
+Add the shared secret to the settings.py file like so:
+COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET = '<your coinbase webhook secret here>'
+
+# Test the Endpoint
+
+With your application deployed, you can send a test webhook request from the Commerce Dashboard. Navigate to "Webhook subscriptions" and click on "Details" under the webhook endpoint and Enter your endpoint URL and press "Save".
+
+# My hosted website Link:
+
+https://AcceptingCryptoPayments.shubhamkumar252.repl.co
